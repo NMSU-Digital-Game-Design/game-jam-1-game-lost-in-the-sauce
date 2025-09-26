@@ -35,9 +35,9 @@ Getting to the end of the game by returning to your body signifies a win.
 Humorous experience!
 
 ## Game Characters
-Player Character: Cat
-Enemies: Meatball, Mushroom, Tomato
-Friendly NPC: The Wise Spoon
+- Player Character: Cat
+- Enemies: Meatball, Mushroom, Tomato
+- Friendly NPC: The Wise Spoon
 
 ## Story
 You are a cat. Spaghetti is delicious, so you eat it... but something went wrong and you die! Your feline soul falls out into the spaghetti, and now you must escape it to return to your body. The spaghetti won't make it easy... Those meatballs and mushrooms are out for revenge! 
