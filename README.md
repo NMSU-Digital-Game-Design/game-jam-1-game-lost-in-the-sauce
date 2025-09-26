@@ -20,6 +20,8 @@ What are the core mechanics, i.e., the ones that are getting performed repeatedl
 
 ### Scoring and/or Win / Lose Conditions
 How will players win or lose or know how they are performing in the game?
+Getting hit by enemies will return you to a checkpoint.
+Getting to the end of the game by returning to your body signifies a win. 
 
 ### Controls
 - wasd and arrow keys to move
