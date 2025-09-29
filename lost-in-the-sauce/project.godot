@@ -13,3 +13,8 @@ config_version=5
 config/name="Lost in the Sauce"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"

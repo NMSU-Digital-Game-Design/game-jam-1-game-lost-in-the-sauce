@@ -1,0 +1,12 @@
+{
+	"players": [
+		{
+			"name": "test1",
+			"time": 100
+		},
+		{
+			"name": "test2",
+			"time": 400
+		}
+	]
+}
