@@ -416,7 +416,7 @@ animations = [{
 radius = 13.0
 height = 32.0
 
-[node name="Cat" type="CharacterBody2D"]
+[node name="Cat" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_2v165")
 
 [node name="Node2D" type="Node2D" parent="."]
