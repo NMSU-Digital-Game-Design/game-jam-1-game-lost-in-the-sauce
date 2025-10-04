@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmno2lbcpu7my"]
 
-[ext_resource type="Script" uid="uid://cvc4nsjdycwwi" path="res://Monsters/enemy_node.gd" id="1_pq03l"]
+[ext_resource type="Script" uid="uid://cvc4nsjdycwwi" path="res://Assets/Monsters/enemy_node.gd" id="1_pq03l"]
 [ext_resource type="Texture2D" uid="uid://yqrqt2p4swid" path="res://icon.svg" id="2_fkruf"]
 
 [sub_resource type="Curve2D" id="Curve2D_7kmk7"]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6ewckjfeqb1a"]
+
+[ext_resource type="Script" uid="uid://ducnpdf5yd16y" path="res://Assets/Scripts/deathzone.gd" id="1_yrn4c"]
+[ext_resource type="Script" uid="uid://cq1q1dl68g6mm" path="res://Assets/Scripts/checkpoint_manager.gd" id="2_mvh2s"]
+
+[node name="area1" type="Node2D"]
+
+[node name="deathzone" type="Area2D" parent="."]
+script = ExtResource("1_yrn4c")
+
+[node name="checkpoint_manager" type="Node" parent="."]
+script = ExtResource("2_mvh2s")
