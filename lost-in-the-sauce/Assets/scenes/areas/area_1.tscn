@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6ewckjfeqb1a"]
+[gd_scene load_steps=4 format=3 uid="uid://c6ewckjfeqb1a"]
 
+[ext_resource type="PackedScene" uid="uid://cu8vsg41khamw" path="res://Assets/scenes/character_body_2d.tscn" id="1_2uyew"]
 [ext_resource type="Script" uid="uid://ducnpdf5yd16y" path="res://Assets/Scripts/deathzone.gd" id="1_yrn4c"]
 [ext_resource type="Script" uid="uid://cq1q1dl68g6mm" path="res://Assets/Scripts/checkpoint_manager.gd" id="2_mvh2s"]
 
 [node name="area1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Cat" parent="TileMap" instance=ExtResource("1_2uyew")]
 
 [node name="deathzone" type="Area2D" parent="."]
 script = ExtResource("1_yrn4c")

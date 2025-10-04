@@ -7,11 +7,11 @@ var player
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# gets the node and attaches it to this varaible. same for player
-	checkpoint_manager = get_parent().get_node("checkpointManager")
+	checkpoint_manager = get_parent().get_node("checkpoint_manager")
 	# also, depends on file structure. early errors were thrown because the node is a child
 	# of the TileMap
 	# this may change depending on how the structure is for the initial 2d map. 
-	player = get_parent().get_node("TileMap/player")
+	player = get_parent().get_node("TileMap/Cat")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
