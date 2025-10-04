@@ -4,7 +4,7 @@ var checkpoint_manager
 
 # Called when the node enters the scene tree for the first time.
 # once again, make sure to check how the files are set up and run off that
-# when adding more checkpoints, add an area2d node as a child for the checkpoint_manager
+# when adding more checkpoints, drag the scene checkpoint to the checkpoint_manager 
 func _ready() -> void:
 	checkpoint_manager = get_parent().get_parent().get_node("checkpoint_manager")
 	
