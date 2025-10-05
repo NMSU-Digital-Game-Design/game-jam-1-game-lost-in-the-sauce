@@ -1,0 +1,155 @@
+[gd_scene load_steps=21 format=3 uid="uid://k63y1bvp0ujv"]
+
+[ext_resource type="Texture2D" uid="uid://bfvvikt7yvivy" path="res://Assets/mushroomjump-Sheet-Sheet.png" id="1_ou1nx"]
+[ext_resource type="Script" uid="uid://ct1odmvsr8tqu" path="res://Monsters/mushroom_enemy.gd" id="1_xeu7l"]
+
+[sub_resource type="Curve2D" id="Curve2D_xeu7l"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -303, -3, 0, 0, 0, 0, -276, -26, 0, 0, 0, 0, -248, -5, 0, 0, 0, 0, -214, -25, 0, 0, 0, 0, -181, -6, 0, 0, 0, 0, -139, -23, 0, 0, 0, 0, -108, -7, 0, 0, 0, 0, -66, -26, 0, 0, 0, 0, -34, -9, 0, 0, 0, 0, 5, -27, 0, 0, 0, 0, 43, -7, 0, 0, 0, 0, 2, -28, 0, 0, 0, 0, -34, -8, 0, 0, 0, 0, -66, -26, 0, 0, 0, 0, -108, -7, 0, 0, 0, 0, -142, -25, 0, 0, 0, 0, -181, -7, 0, 0, 0, 0, -213, -27, 0, 0, 0, 0, -248, -7, 0, 0, 0, 0, -277, -27, 0, 0, 0, 0, -303, -6, 0, 0, 0, 0, -303, -3)
+}
+point_count = 22
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mp7m"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8e11"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n057j"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1mvg"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ycp0"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyr04"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cg2od"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guq8q"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ct5o"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkng2"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tiy5"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thjqm"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fj58e"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(192, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0v7d"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lil4"]
+atlas = ExtResource("1_ou1nx")
+region = Rect2(224, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xsfrp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mp7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8e11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n057j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1mvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ycp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyr04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cg2od")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_guq8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ct5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkng2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tiy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thjqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fj58e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0v7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lil4")
+}],
+"loop": true,
+"name": &"hop",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xeu7l"]
+radius = 8.48552
+height = 16.971
+
+[node name="MushroomEnemy" type="Node2D"]
+script = ExtResource("1_xeu7l")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(134, -16)
+curve = SubResource("Curve2D_xeu7l")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-303, -3)
+rotation = -0.991722
+rotates = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+rotation = 1.01578
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_xsfrp")
+animation = &"hop"
+frame = 12
+frame_progress = 0.485453
+
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/AnimatedSprite2D/Area2D"]
+position = Vector2(0.0120286, 0.499855)
+shape = SubResource("CapsuleShape2D_xeu7l")
+
+[connection signal="area_shape_entered" from="Path2D/PathFollow2D/AnimatedSprite2D/Area2D" to="." method="_on_area_2d_area_shape_entered"]
