@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cmno2lbcpu7my"]
 
-[ext_resource type="PackedScene" uid="uid://bnxhxvrk3vxbb" path="res://Monsters/meatball_enemy.tscn" id="1_rantp"]
+[ext_resource type="PackedScene" uid="uid://bnxhxvrk3vxbb" path="res://Assets/Monsters/meatball_enemy.tscn" id="1_rantp"]
 
 [node name="Enemy" type="Node2D"]
 

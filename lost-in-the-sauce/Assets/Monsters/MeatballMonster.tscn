@@ -2,17 +2,19 @@
 
 [sub_resource type="Curve2D" id="Curve2D_7kmk7"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -179, -3, 0, 0, 0, 0, 170, -4, 0, 0, 0, 0, -179, -3)
+"points": PackedVector2Array(0, 0, 0, 0, 8, 9, 0, 0, 0, 0, -181, 9)
 }
-point_count = 3
+point_count = 2
 
 [node name="MeatballMonster" type="Node2D"]
 
 [node name="Meatball" type="Node2D" parent="."]
 
 [node name="Path2D" type="Path2D" parent="Meatball"]
+position = Vector2(-105.143, -2.17152)
+scale = Vector2(0.412607, 0.27616)
 curve = SubResource("Curve2D_7kmk7")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Meatball/Path2D"]
-position = Vector2(-179, -3)
-rotation = -0.00286532
+position = Vector2(8, 9)
+rotation = 3.14159

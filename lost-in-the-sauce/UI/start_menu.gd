@@ -2,7 +2,8 @@ extends CanvasLayer
 
 
 func _on_start_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://assets/scenes/areas/area_1.tscn")
+
 
 
 func _on_leader_board_pressed() -> void:

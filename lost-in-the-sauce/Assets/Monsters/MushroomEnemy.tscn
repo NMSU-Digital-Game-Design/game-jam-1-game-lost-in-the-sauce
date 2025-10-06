@@ -123,7 +123,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xeu7l"]
-radius = 8.48552
+radius = 8.4855
 height = 16.971
 
 [node name="MushroomEnemy" type="Node2D"]

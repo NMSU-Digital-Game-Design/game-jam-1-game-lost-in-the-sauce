@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://ca3c62q5w7rd3" path="res://Assets/scenes/cat.tscn" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://yqrqt2p4swid" path="res://icon.svg" id="2_h2yge"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(292.5, 112)
 
@@ -14,7 +13,7 @@ size = Vector2(292.5, 112)
 [node name="Platform" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform"]
-position = Vector2(86.00001, 94)
+position = Vector2(86, 94)
 scale = Vector2(2.3125, 0.921875)
 texture = ExtResource("2_h2yge")
 
