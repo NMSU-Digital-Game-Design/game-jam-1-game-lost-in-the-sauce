@@ -74,3 +74,7 @@ func _physics_process(delta):
 	if new_anim != current_anim:
 		anim.play(new_anim)
 		current_anim = new_anim
+
+
+func _on_goal_area_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
