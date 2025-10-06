@@ -2,7 +2,7 @@ extends CanvasLayer
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://assets/scenes/areas/area_1.tscn")
+	get_tree().change_scene_to_file("res://Assets/scenes/areas/area_1.tscn")
 
 
 
