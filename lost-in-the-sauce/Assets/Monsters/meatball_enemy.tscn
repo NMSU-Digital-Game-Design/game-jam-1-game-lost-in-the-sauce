@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://bnxhxvrk3vxbb"]
 
-[ext_resource type="Script" uid="uid://cvc4nsjdycwwi" path="res://Monsters/enemy_node.gd" id="1_cgi22"]
+[ext_resource type="Script" uid="uid://cvc4nsjdycwwi" path="res://Assets/Scripts/enemy_node.gd" id="1_cgi22"]
 [ext_resource type="Texture2D" uid="uid://cf5y2xqpcusoh" path="res://Assets/meatball-Sheet.png" id="2_kjt8q"]
 [ext_resource type="Texture2D" uid="uid://4jgsj0g24cs" path="res://Assets/meatball-Sheet-reversed.png" id="3_grp2q"]
 
