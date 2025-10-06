@@ -1,5 +1,7 @@
 extends Node2D
 
+signal killed_player 
+
 @onready var path_follow : PathFollow2D = $Path2D/PathFollow2D
 @onready var sprite : AnimatedSprite2D = $Path2D/PathFollow2D/AnimatedSprite2D
 
@@ -42,3 +44,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		print("Player touched enemy, killing")
 		if checkpoint_manager and player:
 			player.position = checkpoint_manager.lastLocation
+			emit_signal("killed_player")

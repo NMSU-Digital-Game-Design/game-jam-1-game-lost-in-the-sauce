@@ -2,6 +2,7 @@ extends Control
 
 @onready var play_again_button = $TextureRect/VBoxContainer/Button_play_again
 @onready var quit_button = $TextureRect/VBoxContainer/Button_quit
+@onready var label = $TextureRect/VBoxContainer/Label_you_won
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,4 +30,10 @@ func _on_button_quit_pressed() -> void:
 
 
 func _on_goal_area_player_won() -> void:
+	label.text = "You won!"
+	show_screen()
+
+
+func _on_cat_player_lost() -> void:
+	label.text = "You lost!"
 	show_screen()

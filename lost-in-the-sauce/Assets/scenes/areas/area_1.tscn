@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c6ewckjfeqb1a"]
+[gd_scene load_steps=14 format=3 uid="uid://c6ewckjfeqb1a"]
 
 [ext_resource type="Texture2D" uid="uid://1a676uykxkic" path="res://Assets/tileset/tileset.png" id="1_1old6"]
 [ext_resource type="PackedScene" uid="uid://cu8vsg41khamw" path="res://Assets/scenes/character_body_2d.tscn" id="1_2uyew"]
@@ -33,6 +33,9 @@ texture = ExtResource("1_1old6")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_nixbj")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nixbj"]
+size = Vector2(31, 32)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pn0c"]
 size = Vector2(48, 6.5)
 
@@ -56,6 +59,17 @@ layer_0/tile_data = PackedInt32Array(1310717, 131072, 0, 1310718, 131072, 0, 131
 [node name="Cat" parent="TileMap" groups=["player"] instance=ExtResource("1_2uyew")]
 position = Vector2(-2, 283)
 
+[node name="AnimatedSprite2D" parent="TileMap/Cat" index="0"]
+animation = &"attack"
+frame_progress = 0.0
+
+[node name="AttackHitbox" type="Area2D" parent="TileMap/Cat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Cat/AttackHitbox"]
+position = Vector2(19.5, -4)
+shape = SubResource("RectangleShape2D_nixbj")
+debug_color = Color(1, 0, 0, 0.419608)
+
 [node name="deathzone" type="Area2D" parent="."]
 script = ExtResource("1_yrn4c")
 
@@ -70,7 +84,7 @@ shape = SubResource("RectangleShape2D_8pn0c")
 [node name="checkpoint_manager" type="Node" parent="." groups=["checkpoint_manager"]]
 script = ExtResource("2_mvh2s")
 
-[node name="MeatballEnemy" parent="." instance=ExtResource("5_j0une")]
+[node name="MeatballEnemy" parent="." groups=["enemy"] instance=ExtResource("5_j0une")]
 
 [node name="Path2D" parent="MeatballEnemy" index="0"]
 curve = SubResource("Curve2D_j0une")
@@ -101,19 +115,19 @@ offset_top = -3.0
 offset_right = -9.0
 offset_bottom = -3.0
 
-[node name="VBoxContainer" parent="CanvasLayer/WinScreen/TextureRect" index="0"]
-offset_top = 0.0
-offset_bottom = 7.0
-
 [node name="Label_you_won" parent="CanvasLayer/WinScreen/TextureRect/VBoxContainer" index="0"]
 theme_override_font_sizes/font_size = 48
 text = "You won! "
 horizontal_alignment = 1
 
+[connection signal="player_lost" from="TileMap/Cat" to="CanvasLayer/WinScreen" method="_on_cat_player_lost"]
 [connection signal="body_entered" from="deathzone" to="deathzone" method="_on_body_entered"]
+[connection signal="kill_player" from="deathzone" to="TileMap/Cat" method="_on_deathzone_kill_player"]
+[connection signal="killed_player" from="MeatballEnemy" to="TileMap/Cat" method="_on_meatball_enemy_killed_player"]
 [connection signal="body_entered" from="MeatballEnemy/Path2D/PathFollow2D/AnimatedSprite2D/Area2D" to="MeatballEnemy" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="GoalArea" to="GoalArea" method="_on_body_entered"]
 [connection signal="player_won" from="GoalArea" to="CanvasLayer/WinScreen" method="_on_goal_area_player_won"]
 
+[editable path="TileMap/Cat"]
 [editable path="MeatballEnemy"]
 [editable path="CanvasLayer/WinScreen"]

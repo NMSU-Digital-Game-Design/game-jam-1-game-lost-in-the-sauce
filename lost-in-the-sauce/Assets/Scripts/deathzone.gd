@@ -4,6 +4,8 @@ extends Area2D
 var checkpoint_manager
 var player
 
+signal kill_player
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# gets the node and attaches it to this varaible. same for player
@@ -31,3 +33,4 @@ func _on_body_entered(body: Node2D) -> void:
 # and method of how they interact with the player character
 func killPlayer():
 	player.position = checkpoint_manager.lastLocation
+	emit_signal("kill_player")

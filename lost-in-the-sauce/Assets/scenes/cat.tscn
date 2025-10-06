@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://ca3c62q5w7rd3"]
+[gd_scene load_steps=64 format=3 uid="uid://ca3c62q5w7rd3"]
 
 [ext_resource type="Script" uid="uid://bxgpbrctt0dg1" path="res://Assets/Scripts/cat.gd" id="1_2v165"]
 [ext_resource type="Texture2D" uid="uid://ceh8ijfca4y5e" path="res://Assets/cat_assets/AttackCatb.png" id="2_eyw7o"]
@@ -416,6 +416,9 @@ animations = [{
 radius = 13.0
 height = 32.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pj27x"]
+size = Vector2(31, 32)
+
 [node name="Cat" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_2v165")
 
@@ -424,8 +427,7 @@ script = ExtResource("1_2v165")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_1c55x")
-animation = &"run"
-frame_progress = 0.898242
+animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -5)
@@ -436,3 +438,13 @@ zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
 [node name="Level" type="Node2D" parent="."]
+
+[node name="AttackHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox"]
+position = Vector2(19.5, -4)
+shape = SubResource("RectangleShape2D_pj27x")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="AttackHitbox" to="." method="_on_attack_hitbox_body_entered"]
